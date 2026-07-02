@@ -1,19 +1,15 @@
 package com.dionatan.usuario.infraestructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Setter
 @Getter
-@AllArgsConstructor //Cria um construtor com todos os atributos da classe
-@NoArgsConstructor //Cria um construtor vazio, sem parâmetros
-@Entity //aponta para o spring que essa é uma tabela do banco de dados
-//indica o nome da tabela, se não for definido name = "xxxxx" o nome automático será default
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 @Table(name = "telefone")
-
+@Builder
 public class Telefone {
 
     @Id
